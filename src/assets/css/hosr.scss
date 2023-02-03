@@ -1,0 +1,257 @@
+@import './reset.scss';
+
+html,
+body,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Microsoft Yahei", verdana, helvetica, arial, sans-serif;
+}
+
+.clear {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+//容器布局 hos-header hos-main
+.header {
+  // position: fixed;
+  z-index: 2001;
+  width: 100;
+  position: relative;
+  // background-color: white;
+}
+
+//模块公共样式
+.module-title {
+  margin: 0;
+  padding-left: 15px;
+}
+
+.module-item.small {
+
+  .hos-collapse-item__header,
+  .filter-area {
+    height: 36px;
+  }
+
+  .hos-empty {
+    padding: 0;
+
+    .hos-empty__image {
+      width: 50px;
+    }
+
+    .hos-empty__description {
+      margin-top: 0px;
+    }
+  }
+}
+
+.module-item.medium {
+
+  .hos-collapse-item__header,
+  .filter-area {
+    height: 42px;
+  }
+
+  .hos-empty {
+    padding: 10px 0;
+
+    .hos-empty__image {
+      width: 80px;
+    }
+
+    .hos-empty__description {
+      margin-top: 10px;
+    }
+  }
+}
+
+.module-item {
+  position: relative;
+
+  .filter-area {
+    height: 49px;
+  }
+
+  .hos-empty {
+    padding: 15px 0;
+
+    .hos-empty__image {
+      width: 110px;
+    }
+
+    .hos-empty__description {
+      margin-top: 15px;
+    }
+  }
+}
+
+.module-content {
+
+  .layout-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  >.hos-row {
+    display: flex;
+    border-top: 1px solid #ddd;
+  }
+
+  .module-content-list {
+    height: 100%;
+
+    .hos-col {
+      border-left: 1px solid #ddd;
+      max-height: 300px;
+      overflow-y: auto;
+      height: inherit;
+    }
+  }
+
+  .module-content-line {
+    height: inherit;
+    border-left: 1px solid #ddd;
+  }
+
+  .layout-right {
+    .module-content-list {
+      .elCol.last {
+        border-right: 1px solid #ddd;
+      }
+    }
+  }
+}
+
+.dept-check-item {
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.zlowermask {
+  z-index: 800;
+}
+
+// 过滤区
+.filter-area {
+  position: absolute;
+  z-index: 9;
+  top: 0px;
+  left: 150px;
+  display: flex;
+  align-items: center;
+
+  .filter {
+    margin-left: 10px;
+    padding: 3px 8px;
+  }
+
+  .show-effect-filter {
+    margin: 0 10px;
+    width: 300px;
+    white-space: nowrap;
+    text-align: left;
+    overflow-x: auto;
+
+    .fil-item {
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 2px 5px;
+      border-radius: 3px;
+      margin-left: 3px;
+
+      .fa {
+        cursor: pointer;
+        margin-left: 3px;
+
+        &:hover {
+          color: #409eff;
+        }
+      }
+    }
+  }
+}
+
+// hos-select的选中标签
+.selectedLisItems {
+  .hos-select__tags-text {
+    max-width: 180px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// 设置
+.pop-dialog.full-size {
+  .hos-dialog__body {
+    padding: 0 10px;
+  }
+}
+
+.box-card {
+  .hos-card__header {
+    padding: 0;
+  }
+
+  .hos-card__body {
+    padding: 0;
+  }
+}
+
+.hos-select-dropdown.ulWidthNoLimit .hos-scrollbar__view.hos-select-dropdown__list {
+  max-width: none;
+}
+
+// 时间选择器
+.small-drop-dates {
+  width: 550px;
+
+  .hos-date-range-picker__content {
+    padding: 10px;
+
+    .hos-date-table td {
+      padding: 0;
+    }
+  }
+}
+
+// 滚动条
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  width: 6px;
+  background: rgba(#101f1c, 0.1);
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(144, 147, 153, 0.5);
+  background-clip: padding-box;
+  min-height: 28px;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(144, 147, 153, 0.3);
+}

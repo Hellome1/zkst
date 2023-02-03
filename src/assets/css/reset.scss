@@ -1,0 +1,240 @@
+/* 
+ *  重置element-ui样式
+ */
+//栅格响应式重写
+@media only screen and (min-width: 768px) {
+  .el-col-sm-3 {
+    width: 14.28%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .el-col-xs-3 {
+    width: 14.28%;
+  }
+}
+
+//  时间轴下拉选择框
+.el-select-dropdown .el-select-dropdown__item {
+  height: 16px;
+  line-height: 16px;
+}
+
+@media only screen and (max-width: 870px) {
+
+  .el-main,
+  .el-header {
+    width: 1000px !important;
+  }
+}
+
+//布局容器
+.el-main {
+  overflow: auto;
+}
+
+.el-header {
+  padding-top: 5px;
+}
+
+// 复选框
+.el-checkbox-button--mini .el-checkbox-button__inner {
+  padding: 5px 10px;
+  border-radius: 0 !important;
+  color: inherit;
+}
+
+//折叠面板
+.el-collapse {
+  border-top: transparent;
+  border-bottom: transparent;
+}
+
+.el-collapse-item {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+
+.el-collapse-item__header {
+  background-color: #f9f9f9;
+}
+
+.el-collapse-item__content {
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.el-collapse-item__wrap {
+  border-bottom: transparent;
+}
+
+//checkbox
+.el-checkbox-button.is-checked .el-checkbox-button__inner {
+  color: inherit;
+  font-weight: 600;
+}
+
+// select
+.el-select-dropdown {
+  .el-scrollbar__view.el-select-dropdown__list {
+    max-width: 300px;
+    max-height: 250px;
+    overflow: auto;
+
+    .el-select-dropdown__item {
+      height: 24px;
+      line-height: 24px;
+    }
+
+    .el-select-dropdown__item.selected {
+      &::after {
+        right: 5px;
+      }
+    }
+  }
+}
+
+// timePicker
+.el-picker-panel.el-date-picker {
+  transform-origin: top left;
+  transform: scale(0.8);
+
+  .el-date-table {
+    font-size: 16px;
+  }
+}
+
+.el-range-editor--mini.el-input__inner {
+  width: 280px;
+}
+
+/* 
+ *  重置element-ui样式
+ */
+//栅格响应式重写
+@media only screen and (min-width: 768px) {
+  .hos-col-sm-3 {
+    width: 14.28%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hos-col-xs-3 {
+    width: 14.28%;
+  }
+}
+
+//  时间轴下拉选择框
+.hos-select-dropdown .hos-select-dropdown__item {
+  height: 16px;
+  line-height: 16px;
+}
+
+@media only screen and (max-width: 870px) {
+
+  .hos-main,
+  .hos-header {
+    width: 1000px !important;
+  }
+}
+
+//布局容器
+.hos-main {
+  overflow: auto;
+}
+
+.hos-header {
+  padding-top: 5px;
+}
+
+// 复选框
+.hos-checkbox-button--mini .hos-checkbox-button__inner {
+  padding: 5px 10px;
+  border-radius: 0 !important;
+  color: inherit;
+}
+
+//折叠面板
+.hos-collapse {
+  border-top: transparent;
+  border-bottom: transparent;
+  border: none;
+}
+
+.hos-collapse-item {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+
+.hos-collapse-item__header {
+  background-color: #f9f9f9;
+}
+
+.hos-collapse-item__content {
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.hos-collapse-item__wrap {
+  border-bottom: transparent;
+}
+
+.hos-collapse-item__content {
+  padding: 0px;
+}
+
+//checkbox
+.hos-checkbox-button.is-checked .hos-checkbox-button__inner {
+  color: inherit;
+  font-weight: 600;
+}
+
+// select
+.hos-select-dropdown {
+  .hos-scrollbar__view.hos-select-dropdown__list {
+    max-width: 300px;
+    max-height: 250px;
+    overflow: auto;
+
+    .hos-select-dropdown__item {
+      height: 24px;
+      line-height: 24px;
+    }
+
+    .hos-select-dropdown__item.selected {
+      &::after {
+        right: 5px;
+      }
+    }
+  }
+}
+
+// timePicker
+.hos-picker-panel.hos-date-picker {
+  transform-origin: top left;
+  transform: scale(0.8);
+
+  .hos-date-table {
+    font-size: 16px;
+  }
+}
+
+.hos-range-editor--mini.hos-input__inner {
+  width: 280px;
+}
+
+// coloeSelector
+.hos-color-picker__trigger {
+  width: 40px;
+  height: 40px;
+}
+
+// navMenu
+.hos-tabs--top:not(.hos-tabs--card):not(.hos-tabs--border-card):not(.hos-tabs--system) .hos-tabs__nav-wrap {
+  border: none;
+}
+
+// modal
+.hos-dialog__body {
+  padding: 20px;
+}

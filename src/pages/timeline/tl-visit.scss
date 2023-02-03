@@ -1,0 +1,274 @@
+.timeline {
+  border: 1px solid #ccc;
+  background-color: white;
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 15px;
+  position: relative;
+
+  .encTypeFilter {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+
+    .encTypeBox {
+      margin-left: 10px;
+    }
+  }
+
+  .O {
+    // color: #f7bf48;
+    color: #e2a115;
+  }
+
+  .I {
+    color: #5080f6;
+  }
+
+  .E {
+    color: #eb6234;
+  }
+
+  .content {
+    color: #000;
+  }
+
+  .content.O>p {
+    background-color: rgba(247, 191, 82, 0.1);
+  }
+
+  .content.I>p {
+    background-color: rgba(80, 128, 246, 0.1);
+  }
+
+  .content.E>p {
+    background-color: rgba(235, 98, 52, 0.1);
+  }
+
+  .tl-top {
+    box-sizing: border-box;
+    padding-top: 15px;
+    height: 60px;
+  }
+
+  .tl-bottom {
+    box-sizing: border-box;
+    height: 150px;
+    overflow-y: auto;
+    border-top: 1px solid #ccc;
+  }
+
+  .tl-bottom.dept {
+    height: 60px;
+    padding-top: 15px;
+  }
+
+  .tl-left {
+    border-right: 1px solid #ccc;
+
+    .lcjz-container {
+      min-height: 15px;
+
+      .lcjzBtn {
+        margin: auto;
+        width: 30%;
+      }
+    }
+
+    .title {
+      font-size: 16px;
+    }
+
+    .tl-top {
+      padding: 8px;
+
+      .slect {
+        margin-top: 7px;
+
+        .prev-button,
+        .next-button {
+          cursor: pointer;
+          padding: 0 3px;
+        }
+
+        .prev-button.disabled,
+        .next-button.disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
+      }
+
+      .select-page {
+        width: 90px;
+        margin: 0 3px;
+
+        & input {
+          //   border-radius: 0;
+          height: 20px;
+          line-height: 20px;
+        }
+
+        & i {
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .content {
+      padding-top: 60px;
+    }
+  }
+
+  .tl-right {
+    .tl-item {
+      border-right: 1px solid #ccc;
+
+      .tl-top {
+        p {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .day {
+        p {
+          font-size: 16px;
+
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .dept {
+        font-size: 14px;
+        padding-left: 3px;
+        padding-right: 3px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          &:not(:first-child) {
+            margin: 4px 0 0 0;
+          }
+
+          padding: 5px 0px;
+          flex-shrink: 0;
+        }
+
+        p.diagnoseName-highLight {
+          background-color: rgba(255, 0, 0, 0.3);
+        }
+      }
+
+      .fa.fa-external-link {
+        cursor: pointer;
+      }
+    }
+
+    .tl-item:nth-of-type(7) {
+      border-right: none;
+    }
+  }
+}
+
+// 锁定的就诊时间轴
+.timeline {
+
+  .locked_tlVisit {
+    position: fixed;
+    z-index: 2001;
+    top: 56px;
+    // left: 10px;
+    width: calc(100% - 40px);
+    background-color: white;
+    border: 1px solid #ccc;
+
+    .tl-top {
+      height: 50px;
+      padding-top: 8px;
+    }
+
+    .tl-left .tl-top {
+      padding: 3px;
+    }
+
+    .tl-bottom.dept {
+      height: 26px;
+      padding-top: 0;
+    }
+
+    .tl-bottom.content {
+      display: none;
+    }
+
+    .tl-right .tl-item .content {
+      display: none;
+    }
+  }
+}
+
+// 紧凑
+.timeline.small {
+  .tl-left .tl-top {
+    padding: 4px;
+
+    .slect {
+      margin-top: 4px;
+    }
+  }
+
+  .tl-left .content {
+    padding-top: 0px;
+    line-height: 98px;
+  }
+
+  .tl-top {
+    padding-top: 8px;
+    height: 52px;
+  }
+
+  .tl-bottom {
+    height: 100px;
+  }
+
+  .tl-bottom.dept {
+    height: 30px;
+    padding-top: 5px;
+  }
+}
+
+// 中等
+.timeline.medium {
+  .tl-left .tl-top {
+    padding: 6px;
+
+    .slect {
+      margin-top: 6px;
+    }
+  }
+
+  .tl-left .content {
+    padding-top: 0px;
+    line-height: 98px;
+  }
+
+  .tl-top {
+    padding-top: 10px;
+    height: 55px;
+  }
+
+  .tl-bottom {
+    height: 125px;
+  }
+
+  .tl-bottom.dept {
+    height: 50px;
+    padding-top: 5px;
+  }
+}
